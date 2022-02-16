@@ -1,0 +1,4 @@
+src/.vs/
+src/**/obj/
+src/**/bin/
+devops/apis/certs/aspnetapp.pfx
