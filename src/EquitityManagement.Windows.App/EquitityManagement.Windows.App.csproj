@@ -6,4 +6,8 @@
     <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\EquitityManagement.Core\EquitityManagement.Core.csproj" />
+  </ItemGroup>
+
 </Project>

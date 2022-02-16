@@ -1,4 +1,5 @@
 ﻿using EquitityManagement.Core.Dto.Asset;
+using EquitityManagement.Core.Dto.Distribuicao;
 using EquitityManagement.Core.Dto.Entries;
 using EquitityManagement.Core.Dto.GroupAssets;
 using EquitityManagement.Core.Dto.Position;
@@ -14,9 +15,9 @@ namespace EquitityManagement.Core.Dto.Equitity
     {
         public string Identificador { get; set; } = Guid.NewGuid().ToString();
         public CurrencyEnum Currency { get; set; } = CurrencyEnum.BRL;
-
-        public IList<GroupAssetFileDocumentDto> GroupAssets { get; set; }
-        public IList<AssetFileDocumentDto> Assets { get; set; }
+        public IList<DistruibuicaoFileDocumentDto> Distribuicao { get; set; } = new List<DistruibuicaoFileDocumentDto>();
+        public IList<GroupAssetFileDocumentDto> GroupAssets { get; set; } = new List<GroupAssetFileDocumentDto>();
+        public IList<AssetFileDocumentDto> Assets { get; set; } = new List<AssetFileDocumentDto>();
 
         public IList<PositionFileDocumentDto> Positions { get; set; } = new List<PositionFileDocumentDto>();
         public IList<EntrieFileDocumentDto> Entries { get; set; } = new List<EntrieFileDocumentDto>();

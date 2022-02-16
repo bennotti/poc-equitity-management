@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EquitityManagement.Core.Enum;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -13,5 +14,6 @@ namespace EquitityManagement.Core.Dto.Order
         public decimal Cost { get; set; } = decimal.Zero;
         public decimal Payment { get; set; } = decimal.Zero;
         public DateTime AvailableDate { get; set; } = DateTime.Now;
+        public BrokerEnum Boker { get; set; } = BrokerEnum.NAOIDENTIFICADO;
     }
 }
