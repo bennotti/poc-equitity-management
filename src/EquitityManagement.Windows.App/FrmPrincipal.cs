@@ -1,6 +1,7 @@
 ﻿using EquitityManagement.Core.Dto.Equitity;
 using EquitityManagement.Core.Dto.Position;
 using EquitityManagement.Core.Helper;
+using EquitityManagement.Windows.App.Telas;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,10 +17,11 @@ namespace EquitityManagement.Windows.App
     public partial class FrmPrincipal : Form
     {
         private EquitityFileDocumentDto _equitityFileDocument;
-
-        public FrmPrincipal()
+        private readonly FrmOrdens _frmOrdens;
+        public FrmPrincipal(FrmOrdens frmOrdens)
         {
             InitializeComponent();
+            _frmOrdens = frmOrdens;
         }
 
         private void btnPainelPreco_Click(object sender, EventArgs e)
@@ -44,7 +46,7 @@ namespace EquitityManagement.Windows.App
 
         private void btnNovaOrdem_Click(object sender, EventArgs e)
         {
-            //
+            _frmOrdens.ShowDialog();
         }
 
         void AtualizarGridViewPosicoes()

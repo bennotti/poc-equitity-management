@@ -1,3 +1,5 @@
+using EquitityManagement.Windows.App.Telas;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,10 +16,25 @@ namespace EquitityManagement.Windows.App
         [STAThread]
         static void Main()
         {
-            Application.SetHighDpiMode(HighDpiMode.SystemAware);
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmPrincipal());
+            System.Windows.Forms.Application.SetHighDpiMode(HighDpiMode.SystemAware);
+            System.Windows.Forms.Application.EnableVisualStyles();
+            System.Windows.Forms.Application.SetCompatibleTextRenderingDefault(false);
+            var services = new ServiceCollection();
+
+            ConfigureServices(services);
+            services.AddScoped<FrmPrincipal>();
+            services.AddScoped<FrmOrdens>();
+
+            using (ServiceProvider serviceProvider = services.BuildServiceProvider())
+            {
+                var frmPrincipal = serviceProvider.GetRequiredService<FrmPrincipal>();
+                System.Windows.Forms.Application.Run(frmPrincipal);
+            }
+        }
+
+        private static void ConfigureServices(ServiceCollection services)
+        {
+            services.AddTransient<Random>();
         }
     }
 }

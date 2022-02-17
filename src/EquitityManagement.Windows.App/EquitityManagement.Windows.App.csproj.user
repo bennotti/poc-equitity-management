@@ -4,5 +4,8 @@
     <Compile Update="FrmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Telas\FrmOrdens.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>
