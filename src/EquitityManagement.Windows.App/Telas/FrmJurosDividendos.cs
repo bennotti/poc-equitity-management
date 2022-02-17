@@ -8,17 +8,11 @@ using System.Windows.Forms;
 
 namespace EquitityManagement.Windows.App.Telas
 {
-    public partial class FrmOrdens : Form
+    public partial class FrmJurosDividendos : Form
     {
-        public FrmOrdens()
+        public FrmJurosDividendos()
         {
             InitializeComponent();
-        }
-
-        private void btnSalvar_Click(object sender, EventArgs e)
-        {
-            //
-            this.DialogResult = DialogResult.OK;
         }
     }
 }

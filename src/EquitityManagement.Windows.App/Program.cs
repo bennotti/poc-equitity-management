@@ -24,6 +24,10 @@ namespace EquitityManagement.Windows.App
             ConfigureServices(services);
             services.AddScoped<FrmPrincipal>();
             services.AddScoped<FrmOrdens>();
+            services.AddScoped<FrmAtivos>();
+            services.AddScoped<FrmGruposAtivos>();
+            services.AddScoped<FrmJurosDividendos>();
+            services.AddScoped<FrmPainelPreco>();
 
             using (ServiceProvider serviceProvider = services.BuildServiceProvider())
             {

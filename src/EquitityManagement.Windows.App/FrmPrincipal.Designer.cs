@@ -47,25 +47,23 @@
             this.btnNovaOrdem = new System.Windows.Forms.Button();
             this.btnNovaTransacao = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.txtRebaixamento = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.txtJurosDividendos = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.totalRetorno = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtRetorno = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtValorização = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtTotalAlocado = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtTotalLivre = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.totalRisco = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtMoeda = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvDistribuicao = new System.Windows.Forms.DataGridView();
@@ -270,25 +268,23 @@
             // groupBox1
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.groupBox1.Controls.Add(this.textBox9);
-            this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.textBox10);
+            this.groupBox1.Controls.Add(this.txtRebaixamento);
             this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.textBox8);
+            this.groupBox1.Controls.Add(this.txtJurosDividendos);
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.textBox7);
+            this.groupBox1.Controls.Add(this.totalRetorno);
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.textBox6);
+            this.groupBox1.Controls.Add(this.txtRetorno);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.textBox5);
+            this.groupBox1.Controls.Add(this.txtValorização);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.textBox4);
+            this.groupBox1.Controls.Add(this.txtTotalAlocado);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.txtTotalLivre);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.totalRisco);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtMoeda);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Enabled = false;
             this.groupBox1.Location = new System.Drawing.Point(12, 462);
@@ -297,156 +293,175 @@
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             // 
-            // textBox9
+            // txtRebaixamento
             // 
-            this.textBox9.Location = new System.Drawing.Point(350, 132);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(130, 23);
-            this.textBox9.TabIndex = 9;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(246, 135);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(98, 15);
-            this.label9.TabIndex = 18;
-            this.label9.Text = "Juros/Dividendos";
-            // 
-            // textBox10
-            // 
-            this.textBox10.Location = new System.Drawing.Point(110, 132);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(130, 23);
-            this.textBox10.TabIndex = 4;
+            this.txtRebaixamento.Location = new System.Drawing.Point(167, 81);
+            this.txtRebaixamento.Name = "txtRebaixamento";
+            this.txtRebaixamento.PlaceholderText = "0.000.000.000.000,00";
+            this.txtRebaixamento.ReadOnly = true;
+            this.txtRebaixamento.Size = new System.Drawing.Size(155, 23);
+            this.txtRebaixamento.TabIndex = 4;
+            this.txtRebaixamento.TabStop = false;
+            this.txtRebaixamento.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(6, 135);
+            this.label10.Location = new System.Drawing.Point(167, 63);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(83, 15);
             this.label10.TabIndex = 16;
             this.label10.Text = "Rebaixamento";
             // 
-            // textBox8
+            // txtJurosDividendos
             // 
-            this.textBox8.Location = new System.Drawing.Point(350, 16);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(130, 23);
-            this.textBox8.TabIndex = 5;
+            this.txtJurosDividendos.Location = new System.Drawing.Point(167, 125);
+            this.txtJurosDividendos.Name = "txtJurosDividendos";
+            this.txtJurosDividendos.PlaceholderText = "0.000.000.000.000,00";
+            this.txtJurosDividendos.ReadOnly = true;
+            this.txtJurosDividendos.Size = new System.Drawing.Size(155, 23);
+            this.txtJurosDividendos.TabIndex = 5;
+            this.txtJurosDividendos.TabStop = false;
+            this.txtJurosDividendos.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(246, 19);
+            this.label8.Location = new System.Drawing.Point(328, 19);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(77, 15);
             this.label8.TabIndex = 14;
             this.label8.Text = "Total Retorno";
             // 
-            // textBox7
+            // totalRetorno
             // 
-            this.textBox7.Location = new System.Drawing.Point(350, 45);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(130, 23);
-            this.textBox7.TabIndex = 6;
+            this.totalRetorno.Location = new System.Drawing.Point(328, 37);
+            this.totalRetorno.Name = "totalRetorno";
+            this.totalRetorno.PlaceholderText = "0.000.000.000.000,00";
+            this.totalRetorno.ReadOnly = true;
+            this.totalRetorno.Size = new System.Drawing.Size(152, 23);
+            this.totalRetorno.TabIndex = 6;
+            this.totalRetorno.TabStop = false;
+            this.totalRetorno.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(246, 48);
+            this.label7.Location = new System.Drawing.Point(6, 63);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(49, 15);
+            this.label7.Size = new System.Drawing.Size(35, 15);
             this.label7.TabIndex = 12;
-            this.label7.Text = "Retorno";
+            this.label7.Text = "Risco";
             // 
-            // textBox6
+            // txtRetorno
             // 
-            this.textBox6.Location = new System.Drawing.Point(350, 74);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(130, 23);
-            this.textBox6.TabIndex = 7;
+            this.txtRetorno.Location = new System.Drawing.Point(328, 81);
+            this.txtRetorno.Name = "txtRetorno";
+            this.txtRetorno.PlaceholderText = "0.000.000.000.000,00";
+            this.txtRetorno.ReadOnly = true;
+            this.txtRetorno.Size = new System.Drawing.Size(152, 23);
+            this.txtRetorno.TabIndex = 7;
+            this.txtRetorno.TabStop = false;
+            this.txtRetorno.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(246, 77);
+            this.label6.Location = new System.Drawing.Point(6, 107);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(66, 15);
+            this.label6.Size = new System.Drawing.Size(57, 15);
             this.label6.TabIndex = 10;
-            this.label6.Text = "Valorização";
+            this.label6.Text = "Total livre";
             // 
-            // textBox5
+            // txtValorização
             // 
-            this.textBox5.Location = new System.Drawing.Point(350, 103);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(130, 23);
-            this.textBox5.TabIndex = 8;
+            this.txtValorização.Location = new System.Drawing.Point(328, 125);
+            this.txtValorização.Name = "txtValorização";
+            this.txtValorização.PlaceholderText = "0,00 %";
+            this.txtValorização.ReadOnly = true;
+            this.txtValorização.Size = new System.Drawing.Size(152, 23);
+            this.txtValorização.TabIndex = 8;
+            this.txtValorização.TabStop = false;
+            this.txtValorização.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(246, 106);
+            this.label5.Location = new System.Drawing.Point(328, 107);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(98, 15);
+            this.label5.Size = new System.Drawing.Size(66, 15);
             this.label5.TabIndex = 8;
-            this.label5.Text = "Juros/Dividendos";
+            this.label5.Text = "Valorização";
             // 
-            // textBox4
+            // txtTotalAlocado
             // 
-            this.textBox4.Location = new System.Drawing.Point(110, 103);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(130, 23);
-            this.textBox4.TabIndex = 3;
+            this.txtTotalAlocado.Location = new System.Drawing.Point(167, 37);
+            this.txtTotalAlocado.Name = "txtTotalAlocado";
+            this.txtTotalAlocado.PlaceholderText = "0.000.000.000.000,00";
+            this.txtTotalAlocado.ReadOnly = true;
+            this.txtTotalAlocado.Size = new System.Drawing.Size(155, 23);
+            this.txtTotalAlocado.TabIndex = 3;
+            this.txtTotalAlocado.TabStop = false;
+            this.txtTotalAlocado.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 106);
+            this.label4.Location = new System.Drawing.Point(167, 19);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(83, 15);
+            this.label4.Size = new System.Drawing.Size(77, 15);
             this.label4.TabIndex = 6;
-            this.label4.Text = "Rebaixamento";
+            this.label4.Text = "Total alocado";
             // 
-            // textBox3
+            // txtTotalLivre
             // 
-            this.textBox3.Location = new System.Drawing.Point(110, 74);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(130, 23);
-            this.textBox3.TabIndex = 2;
+            this.txtTotalLivre.Location = new System.Drawing.Point(6, 125);
+            this.txtTotalLivre.Name = "txtTotalLivre";
+            this.txtTotalLivre.PlaceholderText = "0.000.000.000.000,00";
+            this.txtTotalLivre.ReadOnly = true;
+            this.txtTotalLivre.Size = new System.Drawing.Size(155, 23);
+            this.txtTotalLivre.TabIndex = 2;
+            this.txtTotalLivre.TabStop = false;
+            this.txtTotalLivre.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 77);
+            this.label3.Location = new System.Drawing.Point(167, 108);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 15);
+            this.label3.Size = new System.Drawing.Size(98, 15);
             this.label3.TabIndex = 4;
-            this.label3.Text = "Risco";
+            this.label3.Text = "Juros/Dividendos";
             // 
-            // textBox2
+            // totalRisco
             // 
-            this.textBox2.Location = new System.Drawing.Point(110, 45);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(130, 23);
-            this.textBox2.TabIndex = 1;
+            this.totalRisco.Location = new System.Drawing.Point(6, 81);
+            this.totalRisco.Name = "totalRisco";
+            this.totalRisco.PlaceholderText = "10 %";
+            this.totalRisco.ReadOnly = true;
+            this.totalRisco.Size = new System.Drawing.Size(155, 23);
+            this.totalRisco.TabIndex = 1;
+            this.totalRisco.TabStop = false;
+            this.totalRisco.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 48);
+            this.label2.Location = new System.Drawing.Point(328, 63);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 15);
+            this.label2.Size = new System.Drawing.Size(49, 15);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Total Alocado";
+            this.label2.Text = "Retorno";
             // 
-            // textBox1
+            // txtMoeda
             // 
-            this.textBox1.Location = new System.Drawing.Point(110, 16);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(130, 23);
-            this.textBox1.TabIndex = 0;
+            this.txtMoeda.Location = new System.Drawing.Point(6, 37);
+            this.txtMoeda.Name = "txtMoeda";
+            this.txtMoeda.PlaceholderText = "BRL";
+            this.txtMoeda.ReadOnly = true;
+            this.txtMoeda.Size = new System.Drawing.Size(155, 23);
+            this.txtMoeda.TabIndex = 0;
+            this.txtMoeda.TabStop = false;
             // 
             // label1
             // 
@@ -677,25 +692,23 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn variacaoDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource distruibuicaoFileDocumentDtoBindingSource;
         private System.Windows.Forms.Button btnFechar;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtTotalAlocado;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtTotalLivre;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox totalRisco;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtMoeda;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox txtRebaixamento;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox txtJurosDividendos;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox totalRetorno;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtRetorno;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtValorização;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox groupBox3;
     }

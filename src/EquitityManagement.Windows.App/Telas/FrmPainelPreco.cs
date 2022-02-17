@@ -8,17 +8,11 @@ using System.Windows.Forms;
 
 namespace EquitityManagement.Windows.App.Telas
 {
-    public partial class FrmOrdens : Form
+    public partial class FrmPainelPreco : Form
     {
-        public FrmOrdens()
+        public FrmPainelPreco()
         {
             InitializeComponent();
-        }
-
-        private void btnSalvar_Click(object sender, EventArgs e)
-        {
-            //
-            this.DialogResult = DialogResult.OK;
         }
     }
 }
