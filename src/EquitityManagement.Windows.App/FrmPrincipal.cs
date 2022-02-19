@@ -103,5 +103,15 @@ namespace EquitityManagement.Windows.App
         {
             //
         }
+
+        private void btnExtrato_Click(object sender, EventArgs e)
+        {
+            //
+        }
+
+        private void btnFechar_Click(object sender, EventArgs e)
+        {
+            //
+        }
     }
 }

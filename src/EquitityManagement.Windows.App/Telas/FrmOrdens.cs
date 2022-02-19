@@ -133,5 +133,30 @@ namespace EquitityManagement.Windows.App.Telas
                 txtAtivoOperado.Text = string.Empty;
             }
         }
+
+        private void txtPrecoExecutado_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //
+        }
+
+        private void txtPrecoExecutado_Leave(object sender, EventArgs e)
+        {
+            //
+        }
+
+        private void txtPrecoExecutado_KeyUp(object sender, KeyEventArgs e)
+        {
+            //
+        }
+
+        private void btnRemover_Click(object sender, EventArgs e)
+        {
+            //
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            //
+        }
     }
 }

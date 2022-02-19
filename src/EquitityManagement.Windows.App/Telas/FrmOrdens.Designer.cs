@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnEditar = new System.Windows.Forms.Button();
             this.btnRemover = new System.Windows.Forms.Button();
             this.dgvOrdens = new System.Windows.Forms.DataGridView();
             this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -64,15 +65,15 @@
             this.txtAtivoOperado = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.txtDataRealizacao = new System.Windows.Forms.MaskedTextBox();
+            this.txtDataAquisicao = new System.Windows.Forms.MaskedTextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.btnLimpar = new System.Windows.Forms.Button();
             this.btnAdicionar = new System.Windows.Forms.Button();
             this.cbBrokers = new System.Windows.Forms.ComboBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.txtDataRealizacao = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.txtDataAquisicao = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.txtValorPago = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
@@ -96,6 +97,7 @@
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.btnEditar);
             this.groupBox1.Controls.Add(this.btnRemover);
             this.groupBox1.Controls.Add(this.dgvOrdens);
             this.groupBox1.Location = new System.Drawing.Point(12, 298);
@@ -104,6 +106,19 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ordens";
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEditar.Enabled = false;
+            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditar.Location = new System.Drawing.Point(401, 22);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(131, 25);
+            this.btnEditar.TabIndex = 9;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnRemover
             // 
@@ -116,6 +131,7 @@
             this.btnRemover.TabIndex = 8;
             this.btnRemover.Text = "Remover";
             this.btnRemover.UseVisualStyleBackColor = true;
+            this.btnRemover.Click += new System.EventHandler(this.btnRemover_Click);
             // 
             // dgvOrdens
             // 
@@ -139,6 +155,7 @@
             this.bokerDataGridViewTextBoxColumn});
             this.dgvOrdens.DataSource = this.orderFileDocumentDtoBindingSource;
             this.dgvOrdens.Location = new System.Drawing.Point(6, 53);
+            this.dgvOrdens.MultiSelect = false;
             this.dgvOrdens.Name = "dgvOrdens";
             this.dgvOrdens.ReadOnly = true;
             this.dgvOrdens.RowHeadersVisible = false;
@@ -448,15 +465,15 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.txtDataRealizacao);
+            this.groupBox3.Controls.Add(this.txtDataAquisicao);
             this.groupBox3.Controls.Add(this.textBox2);
             this.groupBox3.Controls.Add(this.label19);
             this.groupBox3.Controls.Add(this.btnLimpar);
             this.groupBox3.Controls.Add(this.btnAdicionar);
             this.groupBox3.Controls.Add(this.cbBrokers);
             this.groupBox3.Controls.Add(this.label18);
-            this.groupBox3.Controls.Add(this.txtDataRealizacao);
             this.groupBox3.Controls.Add(this.label17);
-            this.groupBox3.Controls.Add(this.txtDataAquisicao);
             this.groupBox3.Controls.Add(this.label16);
             this.groupBox3.Controls.Add(this.txtValorPago);
             this.groupBox3.Controls.Add(this.label15);
@@ -472,6 +489,26 @@
             this.groupBox3.TabIndex = 4;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Dados da ordem";
+            // 
+            // txtDataRealizacao
+            // 
+            this.txtDataRealizacao.Location = new System.Drawing.Point(266, 81);
+            this.txtDataRealizacao.Mask = "00/00/0000";
+            this.txtDataRealizacao.Name = "txtDataRealizacao";
+            this.txtDataRealizacao.Size = new System.Drawing.Size(86, 23);
+            this.txtDataRealizacao.TabIndex = 31;
+            this.txtDataRealizacao.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtDataRealizacao.ValidatingType = typeof(System.DateTime);
+            // 
+            // txtDataAquisicao
+            // 
+            this.txtDataAquisicao.Location = new System.Drawing.Point(172, 81);
+            this.txtDataAquisicao.Mask = "00/00/0000";
+            this.txtDataAquisicao.Name = "txtDataAquisicao";
+            this.txtDataAquisicao.Size = new System.Drawing.Size(88, 23);
+            this.txtDataAquisicao.TabIndex = 30;
+            this.txtDataAquisicao.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtDataAquisicao.ValidatingType = typeof(System.DateTime);
             // 
             // textBox2
             // 
@@ -533,15 +570,6 @@
             this.label18.TabIndex = 24;
             this.label18.Text = "Broker";
             // 
-            // txtDataRealizacao
-            // 
-            this.txtDataRealizacao.Location = new System.Drawing.Point(266, 81);
-            this.txtDataRealizacao.Name = "txtDataRealizacao";
-            this.txtDataRealizacao.PlaceholderText = "00/00/0000";
-            this.txtDataRealizacao.Size = new System.Drawing.Size(86, 23);
-            this.txtDataRealizacao.TabIndex = 21;
-            this.txtDataRealizacao.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
             // label17
             // 
             this.label17.AutoSize = true;
@@ -550,15 +578,6 @@
             this.label17.Size = new System.Drawing.Size(86, 15);
             this.label17.TabIndex = 22;
             this.label17.Text = "Data realização";
-            // 
-            // txtDataAquisicao
-            // 
-            this.txtDataAquisicao.Location = new System.Drawing.Point(172, 81);
-            this.txtDataAquisicao.Name = "txtDataAquisicao";
-            this.txtDataAquisicao.PlaceholderText = "00/00/0000";
-            this.txtDataAquisicao.Size = new System.Drawing.Size(88, 23);
-            this.txtDataAquisicao.TabIndex = 19;
-            this.txtDataAquisicao.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label16
             // 
@@ -592,6 +611,7 @@
             this.txtCustoAquisicao.Location = new System.Drawing.Point(346, 37);
             this.txtCustoAquisicao.Name = "txtCustoAquisicao";
             this.txtCustoAquisicao.PlaceholderText = "0.000.000.000.000,00";
+            this.txtCustoAquisicao.ReadOnly = true;
             this.txtCustoAquisicao.Size = new System.Drawing.Size(160, 23);
             this.txtCustoAquisicao.TabIndex = 15;
             this.txtCustoAquisicao.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -631,6 +651,9 @@
             this.txtPrecoExecutado.Size = new System.Drawing.Size(158, 23);
             this.txtPrecoExecutado.TabIndex = 5;
             this.txtPrecoExecutado.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtPrecoExecutado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecoExecutado_KeyPress);
+            this.txtPrecoExecutado.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtPrecoExecutado_KeyUp);
+            this.txtPrecoExecutado.Leave += new System.EventHandler(this.txtPrecoExecutado_Leave);
             // 
             // label12
             // 
@@ -735,9 +758,7 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ComboBox cbBrokers;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox txtDataRealizacao;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox txtDataAquisicao;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox txtValorPago;
         private System.Windows.Forms.Label label15;
@@ -750,5 +771,8 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.MaskedTextBox txtDataRealizacao;
+        private System.Windows.Forms.MaskedTextBox txtDataAquisicao;
+        private System.Windows.Forms.Button btnEditar;
     }
 }

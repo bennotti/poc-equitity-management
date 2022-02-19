@@ -35,6 +35,14 @@
             this.btnSair = new System.Windows.Forms.Button();
             this.btnPainelPreco = new System.Windows.Forms.Button();
             this.dgvPosicoes = new System.Windows.Forms.DataGridView();
+            this.assetTradeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.percentRiskDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.currentPriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.currencyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.degradationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.amountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.costCurrencyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.costCurrencyEquitityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.positionFileDocumentDtoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnNovaOrdem = new System.Windows.Forms.Button();
             this.btnNovaTransacao = new System.Windows.Forms.Button();
@@ -71,14 +79,7 @@
             this.btnDadosExemplo = new System.Windows.Forms.Button();
             this.btnFechar = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.assetTradeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.percentRiskDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.currentPriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.currencyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.degradationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.amountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.costCurrencyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.costCurrencyEquitityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnExtrato = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPosicoes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.positionFileDocumentDtoBindingSource)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -180,6 +181,62 @@
             this.dgvPosicoes.TabIndex = 0;
             this.dgvPosicoes.DoubleClick += new System.EventHandler(this.dgvPosicoes_DoubleClick);
             // 
+            // assetTradeDataGridViewTextBoxColumn
+            // 
+            this.assetTradeDataGridViewTextBoxColumn.DataPropertyName = "AssetTrade";
+            this.assetTradeDataGridViewTextBoxColumn.HeaderText = "AssetTrade";
+            this.assetTradeDataGridViewTextBoxColumn.Name = "assetTradeDataGridViewTextBoxColumn";
+            this.assetTradeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // percentRiskDataGridViewTextBoxColumn
+            // 
+            this.percentRiskDataGridViewTextBoxColumn.DataPropertyName = "PercentRisk";
+            this.percentRiskDataGridViewTextBoxColumn.HeaderText = "PercentRisk";
+            this.percentRiskDataGridViewTextBoxColumn.Name = "percentRiskDataGridViewTextBoxColumn";
+            this.percentRiskDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // currentPriceDataGridViewTextBoxColumn
+            // 
+            this.currentPriceDataGridViewTextBoxColumn.DataPropertyName = "CurrentPrice";
+            this.currentPriceDataGridViewTextBoxColumn.HeaderText = "CurrentPrice";
+            this.currentPriceDataGridViewTextBoxColumn.Name = "currentPriceDataGridViewTextBoxColumn";
+            this.currentPriceDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // currencyDataGridViewTextBoxColumn
+            // 
+            this.currencyDataGridViewTextBoxColumn.DataPropertyName = "Currency";
+            this.currencyDataGridViewTextBoxColumn.HeaderText = "Currency";
+            this.currencyDataGridViewTextBoxColumn.Name = "currencyDataGridViewTextBoxColumn";
+            this.currencyDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // degradationDataGridViewTextBoxColumn
+            // 
+            this.degradationDataGridViewTextBoxColumn.DataPropertyName = "Degradation";
+            this.degradationDataGridViewTextBoxColumn.HeaderText = "Degradation";
+            this.degradationDataGridViewTextBoxColumn.Name = "degradationDataGridViewTextBoxColumn";
+            this.degradationDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // amountDataGridViewTextBoxColumn
+            // 
+            this.amountDataGridViewTextBoxColumn.DataPropertyName = "Amount";
+            this.amountDataGridViewTextBoxColumn.HeaderText = "Amount";
+            this.amountDataGridViewTextBoxColumn.Name = "amountDataGridViewTextBoxColumn";
+            this.amountDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // costCurrencyDataGridViewTextBoxColumn
+            // 
+            this.costCurrencyDataGridViewTextBoxColumn.DataPropertyName = "CostCurrency";
+            this.costCurrencyDataGridViewTextBoxColumn.HeaderText = "CostCurrency";
+            this.costCurrencyDataGridViewTextBoxColumn.Name = "costCurrencyDataGridViewTextBoxColumn";
+            this.costCurrencyDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // costCurrencyEquitityDataGridViewTextBoxColumn
+            // 
+            this.costCurrencyEquitityDataGridViewTextBoxColumn.DataPropertyName = "CostCurrencyEquitity";
+            this.costCurrencyEquitityDataGridViewTextBoxColumn.HeaderText = "CostCurrencyEquitity";
+            this.costCurrencyEquitityDataGridViewTextBoxColumn.Name = "costCurrencyEquitityDataGridViewTextBoxColumn";
+            this.costCurrencyEquitityDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // positionFileDocumentDtoBindingSource
             // 
             this.positionFileDocumentDtoBindingSource.DataSource = typeof(EquitityManagement.Core.Dto.Position.PositionFileDocumentDto);
@@ -202,9 +259,9 @@
             this.btnNovaTransacao.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnNovaTransacao.Enabled = false;
             this.btnNovaTransacao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNovaTransacao.Location = new System.Drawing.Point(504, 548);
+            this.btnNovaTransacao.Location = new System.Drawing.Point(641, 548);
             this.btnNovaTransacao.Name = "btnNovaTransacao";
-            this.btnNovaTransacao.Size = new System.Drawing.Size(268, 37);
+            this.btnNovaTransacao.Size = new System.Drawing.Size(131, 37);
             this.btnNovaTransacao.TabIndex = 10;
             this.btnNovaTransacao.Text = "Juros/dividendos";
             this.btnNovaTransacao.UseVisualStyleBackColor = true;
@@ -556,6 +613,7 @@
             this.btnFechar.TabIndex = 12;
             this.btnFechar.Text = "Fechar";
             this.btnFechar.UseVisualStyleBackColor = true;
+            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
             // groupBox3
             // 
@@ -569,67 +627,25 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Posições";
             // 
-            // assetTradeDataGridViewTextBoxColumn
+            // btnExtrato
             // 
-            this.assetTradeDataGridViewTextBoxColumn.DataPropertyName = "AssetTrade";
-            this.assetTradeDataGridViewTextBoxColumn.HeaderText = "AssetTrade";
-            this.assetTradeDataGridViewTextBoxColumn.Name = "assetTradeDataGridViewTextBoxColumn";
-            this.assetTradeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // percentRiskDataGridViewTextBoxColumn
-            // 
-            this.percentRiskDataGridViewTextBoxColumn.DataPropertyName = "PercentRisk";
-            this.percentRiskDataGridViewTextBoxColumn.HeaderText = "PercentRisk";
-            this.percentRiskDataGridViewTextBoxColumn.Name = "percentRiskDataGridViewTextBoxColumn";
-            this.percentRiskDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // currentPriceDataGridViewTextBoxColumn
-            // 
-            this.currentPriceDataGridViewTextBoxColumn.DataPropertyName = "CurrentPrice";
-            this.currentPriceDataGridViewTextBoxColumn.HeaderText = "CurrentPrice";
-            this.currentPriceDataGridViewTextBoxColumn.Name = "currentPriceDataGridViewTextBoxColumn";
-            this.currentPriceDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // currencyDataGridViewTextBoxColumn
-            // 
-            this.currencyDataGridViewTextBoxColumn.DataPropertyName = "Currency";
-            this.currencyDataGridViewTextBoxColumn.HeaderText = "Currency";
-            this.currencyDataGridViewTextBoxColumn.Name = "currencyDataGridViewTextBoxColumn";
-            this.currencyDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // degradationDataGridViewTextBoxColumn
-            // 
-            this.degradationDataGridViewTextBoxColumn.DataPropertyName = "Degradation";
-            this.degradationDataGridViewTextBoxColumn.HeaderText = "Degradation";
-            this.degradationDataGridViewTextBoxColumn.Name = "degradationDataGridViewTextBoxColumn";
-            this.degradationDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // amountDataGridViewTextBoxColumn
-            // 
-            this.amountDataGridViewTextBoxColumn.DataPropertyName = "Amount";
-            this.amountDataGridViewTextBoxColumn.HeaderText = "Amount";
-            this.amountDataGridViewTextBoxColumn.Name = "amountDataGridViewTextBoxColumn";
-            this.amountDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // costCurrencyDataGridViewTextBoxColumn
-            // 
-            this.costCurrencyDataGridViewTextBoxColumn.DataPropertyName = "CostCurrency";
-            this.costCurrencyDataGridViewTextBoxColumn.HeaderText = "CostCurrency";
-            this.costCurrencyDataGridViewTextBoxColumn.Name = "costCurrencyDataGridViewTextBoxColumn";
-            this.costCurrencyDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // costCurrencyEquitityDataGridViewTextBoxColumn
-            // 
-            this.costCurrencyEquitityDataGridViewTextBoxColumn.DataPropertyName = "CostCurrencyEquitity";
-            this.costCurrencyEquitityDataGridViewTextBoxColumn.HeaderText = "CostCurrencyEquitity";
-            this.costCurrencyEquitityDataGridViewTextBoxColumn.Name = "costCurrencyEquitityDataGridViewTextBoxColumn";
-            this.costCurrencyEquitityDataGridViewTextBoxColumn.ReadOnly = true;
+            this.btnExtrato.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExtrato.Enabled = false;
+            this.btnExtrato.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExtrato.Location = new System.Drawing.Point(504, 548);
+            this.btnExtrato.Name = "btnExtrato";
+            this.btnExtrato.Size = new System.Drawing.Size(131, 37);
+            this.btnExtrato.TabIndex = 14;
+            this.btnExtrato.Text = "Extrato";
+            this.btnExtrato.UseVisualStyleBackColor = true;
+            this.btnExtrato.Click += new System.EventHandler(this.btnExtrato_Click);
             // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 640);
+            this.Controls.Add(this.btnExtrato);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.btnFechar);
             this.Controls.Add(this.btnDadosExemplo);
@@ -713,5 +729,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn amountDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn costCurrencyDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn costCurrencyEquitityDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button btnExtrato;
     }
 }
