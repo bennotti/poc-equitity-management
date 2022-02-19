@@ -40,7 +40,7 @@
             this.availableDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bokerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.orderFileDocumentDtoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtMercado = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtVariacao = new System.Windows.Forms.TextBox();
@@ -51,13 +51,13 @@
             this.label9 = new System.Windows.Forms.Label();
             this.txtVolumeTotal = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtCustoTotal = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtVencimento = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtMoeda = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtTipo = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtAtivo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -200,15 +200,15 @@
             // 
             this.orderFileDocumentDtoBindingSource.DataSource = typeof(EquitityManagement.Core.Dto.Order.OrderFileDocumentDto);
             // 
-            // textBox1
+            // txtMercado
             // 
-            this.textBox1.Location = new System.Drawing.Point(182, 37);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.PlaceholderText = "NASDAQ";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(130, 23);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.TabStop = false;
+            this.txtMercado.Location = new System.Drawing.Point(182, 37);
+            this.txtMercado.Name = "txtMercado";
+            this.txtMercado.PlaceholderText = "NASDAQ";
+            this.txtMercado.ReadOnly = true;
+            this.txtMercado.Size = new System.Drawing.Size(130, 23);
+            this.txtMercado.TabIndex = 1;
+            this.txtMercado.TabStop = false;
             // 
             // label1
             // 
@@ -231,19 +231,19 @@
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.txtVolumeTotal);
             this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.textBox7);
+            this.groupBox2.Controls.Add(this.txtCustoTotal);
             this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.textBox6);
+            this.groupBox2.Controls.Add(this.txtVencimento);
             this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.textBox5);
+            this.groupBox2.Controls.Add(this.txtMoeda);
             this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.textBox4);
+            this.groupBox2.Controls.Add(this.txtTipo);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.txtAtivo);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.txtAtivoOperado);
             this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Controls.Add(this.txtMercado);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Location = new System.Drawing.Point(12, 12);
             this.groupBox2.Name = "groupBox2";
@@ -332,16 +332,16 @@
             this.label8.TabIndex = 16;
             this.label8.Text = "Volume total";
             // 
-            // textBox7
+            // txtCustoTotal
             // 
-            this.textBox7.Location = new System.Drawing.Point(6, 81);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.PlaceholderText = "0.000.000.000.000,00";
-            this.textBox7.ReadOnly = true;
-            this.textBox7.Size = new System.Drawing.Size(147, 23);
-            this.textBox7.TabIndex = 13;
-            this.textBox7.TabStop = false;
-            this.textBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtCustoTotal.Location = new System.Drawing.Point(6, 81);
+            this.txtCustoTotal.Name = "txtCustoTotal";
+            this.txtCustoTotal.PlaceholderText = "0.000.000.000.000,00";
+            this.txtCustoTotal.ReadOnly = true;
+            this.txtCustoTotal.Size = new System.Drawing.Size(147, 23);
+            this.txtCustoTotal.TabIndex = 13;
+            this.txtCustoTotal.TabStop = false;
+            this.txtCustoTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label7
             // 
@@ -352,15 +352,15 @@
             this.label7.TabIndex = 14;
             this.label7.Text = "Custo total";
             // 
-            // textBox6
+            // txtVencimento
             // 
-            this.textBox6.Location = new System.Drawing.Point(542, 37);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.PlaceholderText = "Janeiro - 00/00/0000";
-            this.textBox6.ReadOnly = true;
-            this.textBox6.Size = new System.Drawing.Size(130, 23);
-            this.textBox6.TabIndex = 11;
-            this.textBox6.TabStop = false;
+            this.txtVencimento.Location = new System.Drawing.Point(542, 37);
+            this.txtVencimento.Name = "txtVencimento";
+            this.txtVencimento.PlaceholderText = "Janeiro - 00/00/0000";
+            this.txtVencimento.ReadOnly = true;
+            this.txtVencimento.Size = new System.Drawing.Size(130, 23);
+            this.txtVencimento.TabIndex = 11;
+            this.txtVencimento.TabStop = false;
             // 
             // label6
             // 
@@ -371,15 +371,15 @@
             this.label6.TabIndex = 12;
             this.label6.Text = "Vencimento";
             // 
-            // textBox5
+            // txtMoeda
             // 
-            this.textBox5.Location = new System.Drawing.Point(318, 37);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.PlaceholderText = "USD";
-            this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(82, 23);
-            this.textBox5.TabIndex = 9;
-            this.textBox5.TabStop = false;
+            this.txtMoeda.Location = new System.Drawing.Point(318, 37);
+            this.txtMoeda.Name = "txtMoeda";
+            this.txtMoeda.PlaceholderText = "USD";
+            this.txtMoeda.ReadOnly = true;
+            this.txtMoeda.Size = new System.Drawing.Size(82, 23);
+            this.txtMoeda.TabIndex = 9;
+            this.txtMoeda.TabStop = false;
             // 
             // label5
             // 
@@ -390,15 +390,15 @@
             this.label5.TabIndex = 10;
             this.label5.Text = "Moeda";
             // 
-            // textBox4
+            // txtTipo
             // 
-            this.textBox4.Location = new System.Drawing.Point(406, 37);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.PlaceholderText = "Ações no Exterior";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(130, 23);
-            this.textBox4.TabIndex = 7;
-            this.textBox4.TabStop = false;
+            this.txtTipo.Location = new System.Drawing.Point(406, 37);
+            this.txtTipo.Name = "txtTipo";
+            this.txtTipo.PlaceholderText = "Ações no Exterior";
+            this.txtTipo.ReadOnly = true;
+            this.txtTipo.Size = new System.Drawing.Size(130, 23);
+            this.txtTipo.TabIndex = 7;
+            this.txtTipo.TabStop = false;
             // 
             // label4
             // 
@@ -705,7 +705,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn availableDateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn bokerDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource orderFileDocumentDtoBindingSource;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtMercado;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox txtVariacao;
@@ -716,13 +716,13 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtVolumeTotal;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtCustoTotal;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtVencimento;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtMoeda;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtTipo;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtAtivoOperado;
         private System.Windows.Forms.Label label3;

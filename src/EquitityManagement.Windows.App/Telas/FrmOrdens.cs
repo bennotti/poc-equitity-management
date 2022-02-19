@@ -1,4 +1,5 @@
-﻿using EquitityManagement.Core.Dto.Equitity;
+﻿using EquitityManagement.Core.Dto.Asset;
+using EquitityManagement.Core.Dto.Equitity;
 using EquitityManagement.Core.Dto.Order;
 using EquitityManagement.Core.Dto.Position;
 using EquitityManagement.Core.Enum;
@@ -17,6 +18,7 @@ namespace EquitityManagement.Windows.App.Telas
     {
         private EquitityFileDocumentDto _equitityFileDocument;
         private PositionFileDocumentDto _position;
+        private AssetFileDocumentDto _asset;
         public FrmOrdens()
         {
             InitializeComponent();
@@ -30,6 +32,7 @@ namespace EquitityManagement.Windows.App.Telas
 
         public DialogResult ShowDialog(EquitityFileDocumentDto equitityFileDocument, int rowIndex, string valor = "")
         {
+            btnSalvar.Enabled = true;
             _equitityFileDocument = equitityFileDocument;
             if (rowIndex < 0)
             {
@@ -37,6 +40,13 @@ namespace EquitityManagement.Windows.App.Telas
             }else
             {
                 _position = _equitityFileDocument.Positions[rowIndex];
+                _asset = _equitityFileDocument.Assets.FirstOrDefault(p => p.AssetTrade.Equals(valor));
+                if(_asset == null)
+                {
+                    MessageBox.Show("Ativo não encontrado");
+                    _position = new PositionFileDocumentDto();
+                    btnSalvar.Enabled = false;
+                }
             }
 
             AtualizarInformacaoTela();
@@ -71,10 +81,14 @@ namespace EquitityManagement.Windows.App.Telas
 
         void AtualizarInformacaoTela()
         {
-            txtAtivo.Text = _position.Asset;
-            txtAtivoOperado.Text = _position.AssetTrade;
+            txtAtivo.Text = _position.Asset.ToUpper();
+            txtAtivoOperado.Text = _position.AssetTrade.ToUpper();
             txtVolumeTotal.Text = _position.Amount.ToString();
             txtPrecoMedio.Text = _position.CurrentPrice.ToString();
+            txtCustoTotal.Text = _position.CostCurrency.ToString();
+
+            txtMercado.Text = _asset.Market.ToString();
+            txtTipo.Text = _asset.TypeAsset.ToString();
 
             dgvOrdens.DataSource = new BindingList<OrderFileDocumentDto>(_position.Orders);
             Application.DoEvents();
@@ -106,7 +120,18 @@ namespace EquitityManagement.Windows.App.Telas
 
         private void txtAtivoOperado_Leave(object sender, EventArgs e)
         {
-            // buscar ativo
+            btnSalvar.Enabled = false;
+            if (string.IsNullOrEmpty(txtAtivoOperado.Text)) return;
+            txtAtivoOperado.Text = txtAtivoOperado.Text.ToUpper();
+
+            _asset = _equitityFileDocument.Assets.FirstOrDefault(p => p.AssetTrade.Equals(txtAtivoOperado.Text));
+            if (_asset == null)
+            {
+                MessageBox.Show("Ativo não encontrado");
+                _position = new PositionFileDocumentDto();
+                btnSalvar.Enabled = false;
+                txtAtivoOperado.Text = string.Empty;
+            }
         }
     }
 }

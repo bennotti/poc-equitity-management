@@ -1,21 +1,10 @@
-# poc-pomodoro-cronometro
-Cronometro pomodoro customizavel.
+# poc-equitity-management
 
-![Tela principal](https://raw.githubusercontent.com/bennotti/poc-pomodoro-cronometro/main/docs/print_principal.png?raw=true)
-
-[![Execução](https://img.youtube.com/vi/AYrFgJ1MrsI/0.jpg)](https://www.youtube.com/watch?v=AYrFgJ1MrsI)
+![Tela principal](https://raw.githubusercontent.com/bennotti/poc-equitity-management/main/docs/print_principal.png?raw=true)
 
 
 Funcionalidades:
-- falar frase/palavra quando o cronometro chegar a zero
-- contar a quantidade de pomodoros executados
-- contar a quantidade de paradas curtas executadas
-- contar a quantidade de paradas longas executadas
-- somar o tempo de pomodoros executados
-- somar o tempo de paradas curtas executadas
-- somar o tempo de paradas longas executadas
-- permite salvar em um arquivo json
-- permite abrir um arquivo json no formato compativel com o sistema
+- em desenvolvimento
 
 Licensing
 ---------
