@@ -435,6 +435,7 @@
             this.txtAtivoOperado.PlaceholderText = "XXYY";
             this.txtAtivoOperado.Size = new System.Drawing.Size(82, 23);
             this.txtAtivoOperado.TabIndex = 5;
+            this.txtAtivoOperado.Leave += new System.EventHandler(this.txtAtivoOperado_Leave);
             // 
             // label3
             // 
@@ -501,6 +502,7 @@
             this.btnLimpar.TabIndex = 27;
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // btnAdicionar
             // 
@@ -511,6 +513,7 @@
             this.btnAdicionar.TabIndex = 26;
             this.btnAdicionar.Text = "Adicionar";
             this.btnAdicionar.UseVisualStyleBackColor = true;
+            this.btnAdicionar.Click += new System.EventHandler(this.btnAdicionar_Click);
             // 
             // cbBrokers
             // 

@@ -46,13 +46,14 @@ namespace EquitityManagement.Windows.App
 
         private void btnNovaOrdem_Click(object sender, EventArgs e)
         {
-            _frmOrdens.ShowDialog();
+            int rowindex = dgvPosicoes.CurrentCell.RowIndex;
+            var valor = dgvPosicoes.Rows[rowindex].Cells[0].Value.ToString();
+            _frmOrdens.ShowDialog(_equitityFileDocument, rowindex, valor);
         }
 
         void AtualizarGridViewPosicoes()
         {
-            dgvPosicoes.DataSource = _equitityFileDocument.Positions;
-
+            dgvPosicoes.DataSource = new BindingList<PositionFileDocumentDto>(_equitityFileDocument.Positions);
         }
 
         private void btnNovoDocumento_Click(object sender, EventArgs e)
@@ -94,6 +95,11 @@ namespace EquitityManagement.Windows.App
         }
 
         private void FrmPrincipal_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            //
+        }
+
+        private void dgvPosicoes_DoubleClick(object sender, EventArgs e)
         {
             //
         }

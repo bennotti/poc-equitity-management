@@ -178,6 +178,7 @@
             this.dgvPosicoes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPosicoes.Size = new System.Drawing.Size(748, 199);
             this.dgvPosicoes.TabIndex = 0;
+            this.dgvPosicoes.DoubleClick += new System.EventHandler(this.dgvPosicoes_DoubleClick);
             // 
             // assetDataGridViewTextBoxColumn
             // 
@@ -292,6 +293,7 @@
             this.groupBox1.Size = new System.Drawing.Size(486, 166);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Resumo";
             // 
             // txtRebaixamento
             // 

@@ -10,6 +10,7 @@ namespace EquitityManagement.Core.Dto.Position
     public class PositionFileDocumentDto
     {
         public string Identificador { get; set; } = Guid.NewGuid().ToString();
+        public string AssetTrade { get; set; } = string.Empty;
         public string Asset { get; set; } = string.Empty;
         public decimal PercentRisk { get; set; } = 10;
         public decimal CurrentPrice { get; set; } = decimal.Zero;

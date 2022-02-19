@@ -15,6 +15,7 @@ namespace EquitityManagement.Core.Helper
     {
         public static PositionFileDocumentDto SamplePositionFileDocument(
             string asset,
+            string assetTrade,
             CurrencyEnum currency,
             IList<OrderFileDocumentDto> orders
         )
@@ -35,6 +36,7 @@ namespace EquitityManagement.Core.Helper
             {
                 Orders = orders,
                 Asset = asset,
+                AssetTrade = assetTrade,
                 CurrentPrice = currentPrice,
                 Currency = currency,
                 Degradation = 0,
@@ -131,26 +133,31 @@ namespace EquitityManagement.Core.Helper
             return new List<PositionFileDocumentDto>
             {
                 SamplePositionFileDocument(
+                    "CIEL3",
                     "CIEL3F",
                     CurrencyEnum.BRL,
                     ordensCiel3f
                 ),
                 SamplePositionFileDocument(
+                    "ITUB3",
                     "ITUB3F",
                     CurrencyEnum.BRL,
                     ordensItub3f
                 ),
                 SamplePositionFileDocument(
                     "AAPLE",
+                    "AAPLE",
                     CurrencyEnum.USD,
                     ordensAaple
                 ),
                 SamplePositionFileDocument(
                     "BRLUSD",
+                    "BRLUSD",
                     CurrencyEnum.BRL,
                     ordensDolar
                 ),
                 SamplePositionFileDocument(
+                    "BTCBRL",
                     "BTCBRL",
                     CurrencyEnum.BRL,
                     ordensBtc
