@@ -611,7 +611,6 @@
             this.txtCustoAquisicao.Location = new System.Drawing.Point(346, 37);
             this.txtCustoAquisicao.Name = "txtCustoAquisicao";
             this.txtCustoAquisicao.PlaceholderText = "0.000.000.000.000,00";
-            this.txtCustoAquisicao.ReadOnly = true;
             this.txtCustoAquisicao.Size = new System.Drawing.Size(160, 23);
             this.txtCustoAquisicao.TabIndex = 15;
             this.txtCustoAquisicao.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
